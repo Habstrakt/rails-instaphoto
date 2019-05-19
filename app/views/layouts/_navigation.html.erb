@@ -1,0 +1,43 @@
+<% if user_signed_in? %>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+	<div class="container">
+  	<div class="collapse navbar-collapse" id="navbarNav">
+  		<%= link_to "NavBar", root_path, class: "nav-link text-logo index-logo" %>
+    	<ul class="navbar-nav ml-auto">
+      	<li class="nav-item">
+        	<%= link_to "Main", root_path, class: "nav-link" %>
+      	</li>
+      	<li class="nav-item">
+        	<%= link_to "About", pages_about_path, class: "nav-link" %>
+      	</li>
+      	<li class="nav-item">
+        	<%= link_to "Exit", destroy_user_session_path, method: :delete, class: "nav-link" %>
+      	</li>
+    	</ul>
+  	</div>
+  </div>
+</nav>
+
+<% else %>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+	<div class="container">
+  	<div class="collapse navbar-collapse" id="navbarNav">
+  		<%= link_to "NavBar", root_path, class: "nav-link text-logo index-logo" %>
+    	<ul class="navbar-nav ml-auto">
+      	<li class="nav-item">
+        	<%= link_to "Main", root_path, class: "nav-link" %>
+      	</li>
+      	<li class="nav-item">
+        	<%= link_to "About", pages_about_path, class: "nav-link" %>
+      	</li>
+      	<li class="nav-item">
+        	<%= link_to "Login", new_user_session_path, class: "nav-link" %>
+      	</li>
+    	</ul>
+  	</div>
+  </div>
+</nav>
+
+<% end %>
