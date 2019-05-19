@@ -10,19 +10,24 @@
   </head>
 
   <body>
+  <div class="container-flued container-background">
     <div class="container">
-      <ul class="nav">
-  <li class="nav-item">
-    <a class="nav-link active" href="<%= root_path %>">Главная</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="<%= pages_about_path %>">About</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-</ul>
+
+
+
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="<%= root_path %>">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<%= pages_about_path %>">About</a>
+          </li>
+        </ul>
+
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+        <%= yield %>
     </div>
-    <%= yield %>
+  </div>
   </body>
 </html>
