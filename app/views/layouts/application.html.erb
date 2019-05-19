@@ -17,11 +17,16 @@
 
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="<%= root_path %>">Главная</a>
+            <%= link_to "Main", root_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<%= pages_about_path %>">About</a>
+            <%= link_to "About", pages_about_path, class: "nav-link" %>
           </li>
+<% if user_signed_in? %>
+          <li class="nav-item">
+            <%= link_to "Exit", destroy_user_session_path, method: :delete, class: "nav-link" %>
+          </li>
+<% end %>
         </ul>
 
        <p class="notice"><%= notice %></p>
