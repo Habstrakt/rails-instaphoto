@@ -1,5 +1,8 @@
 $display4-size: 2.5rem;
 $jumbotron-bg: rgba(255, 255, 255, 0.4);
+$card-bg: rgba(255, 255, 255, 0.4);
+$card-cap-bg: rgba(255, 255, 255, 0.5);
+
 @import "bootstrap";
 @import url(https://fonts.googleapis.com/css?family=Crafty+Girls);
 
@@ -10,8 +13,6 @@ $jumbotron-bg: rgba(255, 255, 255, 0.4);
 	height: 100vh;
 	background-size: cover;
 	background-image: url(image_path('background.jpg'));
-
-
 }
 
 .nav-link:link,
@@ -36,6 +37,13 @@ $jumbotron-bg: rgba(255, 255, 255, 0.4);
 .index-logo {
 	font-size:2rem;
 }
+
+.devise-form {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 
 
  
