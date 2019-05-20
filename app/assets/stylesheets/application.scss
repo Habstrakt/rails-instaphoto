@@ -2,6 +2,7 @@ $display4-size: 2.5rem;
 $jumbotron-bg: rgba(255, 255, 255, 0.4);
 $card-bg: rgba(255, 255, 255, 0.4);
 $card-cap-bg: rgba(255, 255, 255, 0.5);
+$body-bg: #F2F1EF;
 
 @import "bootstrap";
 @import url(https://fonts.googleapis.com/css?family=Crafty+Girls);
@@ -13,6 +14,12 @@ $card-cap-bg: rgba(255, 255, 255, 0.5);
 	height: 100vh;
 	background-size: cover;
 	background-image: url(image_path('background.jpg'));
+}
+
+.container-login {
+	padding-right: 0;
+	padding-left: 0;
+	text-align: center;
 }
 
 .nav-link:link,
@@ -45,15 +52,12 @@ $card-cap-bg: rgba(255, 255, 255, 0.5);
 }
 
 .photo-form {
-	width: 50%;
+	display: inline-block;
 	margin-left: auto;
 	margin-right: auto;
+	text-align: left;
 }
 
-.bg-grey {
-	background-color: #F2F1EF;
-	height: 100vh;
-}
 
 
 
