@@ -23,7 +23,7 @@ class PhotosController < ApplicationController
 
   
   def create
-    @photo = current_user.photos.build
+    @photo = current_user.photos.build(photo_params)
       if @photo.save
         redirect_to @photo, notice: 'Photo was successfully created.'
       else
@@ -59,6 +59,6 @@ class PhotosController < ApplicationController
 
     
     def photo_params
-      params.require(:photo).permit(:description)
+      params.require(:photo).permit(:description, :image)
     end
 end
