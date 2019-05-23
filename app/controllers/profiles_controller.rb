@@ -1,8 +1,8 @@
 class ProfilesController < ApplicationController
-before_action :set_user 
+before_action :set_user, except: [:my_photos, :subscribes_list, :friends_photos]
 
  def show
- end
+ 	end
 
  def subscribe
  	if current_user.id == @user.id
@@ -22,7 +22,7 @@ before_action :set_user
  end
 end
 
- def unsubscribe
+def unsubscribe
  	if current_user.id == @user.id
  		redirect_to profile_path(@user), notice: "Вы не можете отписатся сами от себя"
  	else
@@ -36,7 +36,20 @@ end
 
  end
  end
-end  
+end
+
+def my_photos
+	@photos = current_user.photos.order('created_at DESC')
+end
+
+def subscribes_list
+	@friends = User.where(id: current_user.subscriptions.pluck(:friend_id))
+end
+
+def friends_photos
+	@photos = Photo.where(user_id: current_user.subscriptions.pluck(:friend_id)).order('created_at DESC')
+end
+
 
 private
 
@@ -44,3 +57,5 @@ private
 	      @user = User.find(params[:id])
 	  end
 end
+
+
