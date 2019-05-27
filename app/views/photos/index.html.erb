@@ -3,7 +3,7 @@
       <div class="card-body">
         <%= image_tag photo.image.url(:medium) %><br>
         <strong><%= photo.description %></strong><br>
-        <%= link_to photo.user.email, profile_path(photo.user) if photo.user %><br>
+        <%= link_to photo.user.name, profile_path(photo.user) if photo.user %><br>
         <%= link_to 'Show', photo %>
       <% if photo.user == current_user %>
         | <%= link_to 'Edit', edit_photo_path(photo) %> 
@@ -13,7 +13,7 @@
     </div>
     <% end %>
 
-    <%= will_paginate @photos, list_classes: %w(pagination mx-auto custom-paginate) %>
+    <%= will_paginate @photos, list_classes: %w(pagination justify-content-center) %>
 
 <br>
 <% if user_signed_in?  %>
