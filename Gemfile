@@ -13,6 +13,10 @@ gem 'mmenu-rails', '~> 5.5'
 
 gem "paperclip", "~> 6.0.0"
 
+gem 'will_paginate', '~> 3.1.0'
+
+gem 'will_paginate-bootstrap4'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use Puma as the app server
