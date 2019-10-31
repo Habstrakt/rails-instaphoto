@@ -7,7 +7,7 @@ gem 'bootstrap', '~> 4.3.1'
 
 gem 'jquery-rails'
 
-gem 'devise', '~> 4.6'
+gem 'devise', '~> 4.7'
 
 gem 'mmenu-rails', '~> 5.5'
 
